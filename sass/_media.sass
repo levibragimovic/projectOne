@@ -1,0 +1,348 @@
+/*==========	Desktop First	==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+	.home
+		.header-nav
+			margin: 0 75px
+		.home-title-text
+			font-size: 70px
+		.h1
+			font-size: 50px
+		.home-greeting-text
+			font-size: 16px
+			padding: 0 80px
+		.home-logo
+			margin-top: 100px
+		.owl-carousel
+			width: 90%
+			margin: auto
+		.social
+			right: 20px
+		.owl-theme .owl-nav.disabled+.owl-dots
+			margin-top: -50px
+
+	.gallery
+		height: auto !important
+		.gallery-row
+			padding: 0 10px
+	
+	.testimonials-block
+		.testimonials-comment
+			max-width: 310px
+			padding: 0 20px
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+	.home
+		.header-nav
+			margin: 0 35px
+			font-size: 18px
+		.home-title-text
+			font-size: 60px
+		.h1
+			font-size: 35px
+		.home-greeting-text
+			font-size: 15px
+			padding: 0 40px
+		.home-logo
+			margin-bottom: 50px
+			max-width: 18%
+
+	.about
+		.about-block
+			.about-content
+				.about-title
+					margin-bottom: 15px
+					font-size: 60px
+				.about-text
+					font-size: 17px
+
+	.portfolio
+		.portfolio-subtitle
+			font-size: 55px
+			margin-bottom: 30px
+			&:after
+				bottom: -10px
+		.portfolio-text
+			font-size: 25px
+			margin-bottom: 30px
+
+	.gallery
+		.gallery-row
+			margin-top: 20px
+			margin-bottom: 20px
+
+	.testimonials-block
+		.testimonials-feedbacks
+			flex-direction: column
+		.testimonials-comment
+			max-width: 992px
+			padding-left: 250px
+			margin-bottom: 25px
+			border: none
+			border-bottom: 1px solid #000
+			text-align: inherit
+			.comment-img
+				top: 10px
+				left: 0
+			.comment-title
+				margin-top: 40px
+			.comment-text
+				margin-bottom: 50px
+
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	.home
+		.hamburger
+			display: block
+			position: absolute
+			right: 25px
+			top: 25px
+			z-index: 11
+		.home-logo
+			margin-top: 175px
+			margin-bottom: 20px
+			max-width: 18%
+		.header-nav-position
+			position: fixed
+			max-width: 768px
+			top: -100%
+			z-index: 10
+			background-color: #1e1f1e
+			opacity: .99
+			transition: all .4s linear
+			.header-nav
+				display: block
+				width: 768px
+				.nav-link
+					padding: 15px 0
+					display: block
+					width: 100%
+					&:hover
+						color: grey
+					&:hover:after
+						display: none
+				.nav-icon
+					display: none
+		.social
+			display: none
+
+	.about
+		.about-block
+			margin: 25px 0
+			flex-wrap: wrap
+			justify-content: center
+			.about-content
+				margin-left: 0
+				padding-left: 0
+				text-align: center
+				&::before
+					display: none
+		.my-img
+			display: block
+			width: 75%
+			margin: 0 auto 20px
+
+	.portfolio
+		.portfolio-title
+			font-size: 60px
+			margin-bottom: 15px
+		.portfolio-subtitle
+			font-size: 40px
+			margin-bottom: 25px
+			&:after
+				bottom: -10px
+		.portfolio-text
+			font-size: 19px
+			padding: 0 5px
+			margin-bottom: 25px
+
+	.gallery
+		.gallery-row
+			margin-top: 10px
+			margin-bottom: none
+
+	.video
+		.video-inner
+			padding: 0 10px
+			max-width: 694px
+			.video-subtitle
+				font-size: 55px
+				margin-bottom: 60px
+				&:after
+					bottom: -15px
+			.video-text
+				font-size: 20px
+
+	.video-content
+		.about-btn
+			font-size: 16px !important
+			margin-bottom: 20px !important
+			padding: 10px 30px !important
+		.videos-more
+			flex-wrap: wrap
+			.video-box
+				margin-right: 0
+		.video-greeting
+			video
+				controls: true
+			.video-btn
+				display: none
+		.video-description
+			font-size: 16px
+			margin-top: 10px
+			margin-bottom: 35px
+			&:after
+				display: none
+
+	.testimonials-block
+		.testimonials-sub
+			margin-bottom: 75px
+		.testimonials-comment
+			padding: 0 10px
+			margin-bottom: 0
+			border-bottom-style: dashed
+			.comment-img
+				display: none
+			.comment-text
+				font-size: 16px
+				margin-bottom: 10px
+
+	.contact
+		.contact-container
+			max-width: 50%
+			justify-content: center
+			padding: 0 15px
+		.contact-img
+			display: none
+
+	.footer
+		height: auto !important
+		.header-nav-position
+			display: none
+		.footer-text
+			margin-bottom: 20px
+			font-size: 16px
+		.copyright
+			padding-bottom: 20px
+
+	.footer .nav-icon
+		margin-top: 20px !important
+		margin-bottom: 20px !important
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+	.home
+		.home-logo
+			margin-bottom: 20px
+			margin-top: 250px
+		.home-greeting-text
+			font-size: 15px
+			padding: 0 10px
+		.underline:after
+			padding-bottom: 10px
+		.h1
+			padding-top: 10px
+			padding-bottom: 10px
+		.owl-theme .owl-dots .owl-dot
+			margin-top: 70px
+
+	.about
+		.about-block
+			.about-content
+				.about-title
+					font-size: 40px
+					margin-bottom: 10px
+				.about-text
+					font-size: 14px
+				.about-btn
+					font-size: 15px
+
+	.portfolio
+		.portfolio-title
+			font-size: 50px
+			margin-bottom: 10px
+		.portfolio-subtitle
+			font-size: 25px
+			margin-bottom: 25px
+			&:after
+				bottom: -5px
+		.portfolio-text
+			font-size: 15px
+			margin-bottom: 25px
+
+	.video
+		.video-inner
+			.video-subtitle
+				font-size: 55px
+				margin-bottom: 45px
+			.video-text
+				font-size: 16px
+
+/* Custom, iPhone Retina */	
+@media only screen and (max-width : 320px)
+	.home
+		.home-title-text
+			font-size: 40px
+		.h1
+			font-size: 25px
+		.home-greeting-text
+			font-size: 12px
+			padding: 0 5px
+		.hamburger
+			top: 15px
+			right: 15px
+			padding: 7px
+			.hamburger-inner, .hamburger-inner:after, .hamburger-inner:before
+				width: 35px
+				height: 3px
+			.hamburger-box
+				width: 30px
+				height: 20px
+		.nav-link
+			font-size: 16px
+
+	.testimonials-block
+		.testimonials-sup
+			font-size: 50px
+			margin-bottom: 15px
+		.testimonials-sub
+			font-size: 30px
+			margin-bottom: 50px
+		.testimonials-comment
+			text-align: center
+
+	.contact
+		.contact-sup
+			font-size: 60px
+			padding: 20px 0 15px
+		.contact-sub
+			font-size: 30px
+			margin-bottom: 15px
+		.contact-input
+			max-width: 300px
+
+/*==========	Mobile First	==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	/**/
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	/**/

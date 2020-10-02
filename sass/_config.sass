@@ -1,0 +1,69 @@
+// USER VARIABLES SECTION
+@import media
+
+$accent: #000000 // Accent Color
+$white: #ffffff
+$fontsize: 18.75px // Body Font Size
+$textcolor: #000000 // Text Color
+$system: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+$luis: Luis, sans-serif 
+
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 20px
+$gutter: $grid-gutter-width
+
+// IMPORT SECTION
+
+@import '../fonts/fontawesome/css/font-awesome.min.css'
+@import '../libs/OwlCarousel/assets/owl.carousel.min.css'
+@import '../libs/OwlCarousel/assets/owl.theme.default.min.css'
+@import '../libs/hamburger/hamburgers.min.css'
+// @import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
+// @import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
+// @import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+// @import 'node_modules/bootstrap/scss/utilities/_sizing.scss' // Optional Bootstrap Utilites
+
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		// font-display: swap // Uncomment to initially display system fonts
+		src: local($fname), url($furl) format('woff2')
+
+@include font('Roboto', normal, 400, '../fonts/roboto-regular-webfont.woff2')
+@include font('Roboto', italic, 400, '../fonts/roboto-italic-webfont.woff2')
+@include font('Roboto', normal, 700, '../fonts/roboto-bold-webfont.woff2')
+@include font('Roboto', italic, 700, '../fonts/roboto-bolditalic-webfont.woff2')
+@include font('Nextart', normal, 300, '../fonts/src/nextart-light.otf')
+@include font('RedVelvet', normal, 400, '../fonts/src/RedVelvet-Regular.otf')
+@include font('Brushwell', normal, 400, '../fonts/src/Brushwell.ttf')
+@include font('RiadPro', normal, 400, '../fonts/src/myriadpro-regular.otf')
+@include font('Luis', normal, 400, '../fonts/src/LouisGeorgeCafe.ttf')
+
+// GENERAL DOCUMENT STYLES
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+body
+	font-family: $luis
+	font-size: $fontsize
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	overflow-x: hidden
+	color: $textcolor

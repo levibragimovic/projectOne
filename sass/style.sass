@@ -1,0 +1,593 @@
+@import "config"
+
+*,
+*:before,
+*:after
+  box-sizing: border-box
+
+body
+  margin: 0
+  padding: 0
+  line-height: normal
+  background-color: $white
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+  margin: 0
+
+.container
+  max-width: 974px
+  height: 100%
+  margin: 0 auto
+  padding: 0 15px
+
+// ---------- BURGER ---------- 
+.hamburger
+  display: none
+
+.hamburger-inner, .hamburger-inner:after, .hamburger-inner:before
+  background-color: $white
+.hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner:after, .hamburger.is-active .hamburger-inner:before
+  background-color: $white
+
+.display--active
+  top: 0
+
+// ---------- HEADER ---------- 
+.header-nav
+  display: flex
+  justify-content: space-around
+  list-style: none
+  padding-top: 55px
+  margin: 0 200px
+
+.nav-link
+  display: block
+  width: fit-content
+  text-decoration: none
+  font-family: Nextart
+  font-size: 19.19px
+  font-weight: 300
+  color: $white
+  &:after
+    display: block
+    content: ""
+    height: 2px
+    width: 0%
+    background-color: $white
+    transition: width .2s ease-in-out
+  &:hover:after
+    width: 100%
+
+.home
+  position: relative
+  background: #362c2e url('../images/bg.jpg') center no-repeat
+  background-size: cover
+  width: 100%
+  height: 100vh
+  .container
+    max-width: 1034px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    overflow: hidden
+  .owl-carousel .owl-item img
+    width: auto
+  .owl-item .animated .owl-animated-out .slideOutDown
+    margin-right: 0
+  .owl-nav
+    display: flex
+    justify-content: center
+    margin-top: 100px
+    color: $white
+    font-size: 30px
+  .owl-theme .owl-dots .owl-dot
+    margin-top: 100px
+    outline: none
+    border: none
+  .owl-theme .owl-nav.disabled + .owl-dots
+    margin-bottom: 175px
+
+.nav-icon
+  text-decoration: none
+  font-size: 19.19px
+  color: $white
+  transition: all .2s linear
+  &:hover
+    color: grey
+
+.home-logo
+  display: block
+  margin: 155px auto 0
+
+.home-title-text
+  display: block
+  margin: auto
+  color: $white
+  font-family: Brushwell
+  font-size: 76px
+  line-height: 1
+  text-align: center
+
+.underline::after
+  content: ""
+  display: block
+  margin: auto
+  max-width: 355px
+  padding-bottom: 25px
+  border-bottom: 1px solid $white
+
+.h1
+  display: block
+  font-family: RedVelvet
+  color: $white
+  font-size: 67px
+  font-weight: 300
+  text-align: center
+  padding-top: 30px
+  padding-bottom: 30px
+
+.home-greeting-text
+  color: $white
+  text-align: center
+  font-size: 18.75px
+  line-height: 1.7
+  padding: 0 5px
+  letter-spacing: 2px
+
+.social
+  position: absolute
+  top: 40%
+  right: 45px
+  display: flex
+  flex-direction: column
+  .nav-icon
+    margin-bottom: 40px
+    &:last-child
+      margin-bottom: 0
+
+// ---------- ABOUT ----------
+.about-block
+  margin: 110px 0
+  display: flex
+  .about-content
+    margin-left: 50px
+    padding-left: 25px
+    position: relative
+    &:before
+      content: ""
+      display: block
+      width: 100%
+      max-width: 1px
+      border-left: 1px solid #000
+      position: absolute
+      top: -25px
+      left: 0
+      height: 370px
+    .my-img
+      width: 100%
+      height: auto
+    .about-title
+      font-family: Brushwell
+      font-size: 75.96px
+      font-weight: 400
+      text-indent: 15px
+      margin-bottom: 22px
+      letter-spacing: 8px
+    .about-text
+      font-size: 18.75px
+      line-height: 1.7
+      padding: 0 5px
+      letter-spacing: 2px
+      margin-bottom: 30px
+
+.about-btn
+  font-size: 16.07px
+  text-decoration: none
+  color: $textcolor
+  border: 1px solid $textcolor
+  padding: 10px 15px
+  transition: all .3s linear
+  &:hover
+    color: $white
+    background-color: $textcolor
+
+// ---------- PORTFOLIO ----------
+.portfolio
+  background: url(../images/portfolio-bg.jpg) no-repeat
+  background-size: cover
+  background-position: center
+  height: 416px
+  text-align: center
+  .about-btn
+    padding-right: 50px
+    padding-left: 50px
+
+.portfolio-inner
+  display: flex
+  height: 100%
+  flex-direction: column
+  justify-content: center
+  align-items: center
+
+.portfolio-title
+  font-size: 75.96px
+  font-weight: 400
+  font-family: Brushwell
+  color: $textcolor
+  margin-bottom: 20px
+
+.portfolio-subtitle
+  font-size: 66.92px
+  font-family: RedVelvet
+  font-weight: 300
+  color: $white
+  letter-spacing: 3px
+  position: relative
+  margin-bottom: 50px
+  &:after
+    content: ''
+    display: block
+    width: 100%
+    border-bottom: 2px solid $white
+    position: absolute
+    bottom: -25px
+    left: 0
+    margin-top: 25px
+
+.portfolio-text
+  font-size: 28.7px
+  font-weight: 300
+  font-family: RedVelvet
+  color: #373737
+  margin-bottom: 50px
+
+// ---------- GALLERY ----------
+.gallery
+  display: flex
+  max-width: 1176px
+  height: 1297px
+  margin: auto
+
+.gallery-row
+  width: 100%
+  max-height: 1110px
+  display: flex
+  justify-content: center
+  margin-top: 65px
+  margin-bottom: 35px
+
+.gallery-column
+  max-width: 100%
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  & img
+    margin-top: 8px
+    vertical-align: middle
+    max-width: 100%
+  &:nth-child(2)
+    margin: 0 10px
+
+// ---------- VIDEO ----------
+.video
+  background: url(../images/video-bg.jpg) no-repeat
+  background-size: cover
+  background-position: center
+  height: 416px
+  text-align: center
+
+.video-inner
+  display: flex
+  max-width: 674px
+  height: 100%
+  margin: auto
+  flex-direction: column
+  align-items: center
+
+.video-subtitle
+  font-size: 66.67px
+  font-family: RedVelvet
+  font-weight: 300
+  color: $white
+  letter-spacing: 3px
+  position: relative
+  margin-top: 105px
+  margin-bottom: 80px
+  &:after
+    content: ''
+    display: block
+    width: 100%
+    border-bottom: 2px solid $white
+    position: absolute
+    bottom: -40px
+    left: 0
+
+.video-text
+  font-size: 25px
+  font-weight: 300
+  font-family: RiadPro
+  letter-spacing: 2px
+  color: #373737
+
+// ---------- VIDEO CONTENT ----------
+.video-content
+  display: flex
+  flex-direction: column
+  .about-btn
+    font-size: 18.75px
+    padding: 15px 45px
+    margin: 0 auto 40px
+
+.video-greeting
+  margin-top: 60px
+  text-align: center
+  position: relative
+
+.video-activ
+  max-width: 100%
+  width: 936px
+
+.video-description
+  font-size: 18.75px
+  font-family: RiadPro
+  font-weight: 300
+  letter-spacing: 2px
+  margin-top: 40px
+  margin-bottom: 50px
+  position: relative
+  text-align: center
+  &:after
+    content: ''
+    display: block
+    width: 23px
+    height: 2px
+    position: absolute
+    top: -18px
+    left: 50%
+    border-bottom: 1px solid $textcolor
+
+.videos-more
+  padding: 0 20px
+  display: flex
+  justify-content: center
+  margin: auto
+
+.video-box-file
+  width: 100%
+  max-width: 366px
+
+.video-box
+  max-width: 366px
+  text-align: center
+  margin-right: 20px
+  &:last-child
+    margin-right: 0
+  .video-description:after
+    left: 47%
+
+.line
+  width: 90%
+  margin: auto
+  border-bottom: 2px solid black
+
+// ---------- VIDEO PLAY BUTTON ----------
+.video-btn
+  position: absolute
+  top: 42%
+  left: 43%
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 114px
+  height: 95px
+  background-color: rgba(255, 255, 255, 0.349)
+  border-radius: 10px
+  z-index: 10
+  cursor: pointer
+  transition: opacity .3s ease-in-out
+  opacity: 1
+
+.video-btn-invisible
+  opacity: 0
+
+.button
+  display: block
+  background-color: transparent
+  width: 49px
+  height: 57px
+
+  box-sizing: border-box
+
+  transition: 100ms all ease
+  will-change: border-width
+  cursor: pointer
+
+  // play state
+  border-top: 27.5px solid transparent
+  border-bottom: 27.5px solid transparent
+  border-left: 46px solid $white
+
+  // paused state
+  &.pause
+    border-style: double
+    border-width: 0px 0 0px 60px
+
+// ---------- TESTIMONIALS ----------
+.testimonials-block
+  max-width: 1196px
+  padding: 0 10px
+  margin: auto
+  display: flex
+  flex-direction: column
+  .about-btn
+    padding: 10px 50px
+    margin: 0 auto 45px
+
+.textimonials-title
+  text-align: center
+  margin-top: 45px
+
+.testimonials-sup
+  font-family: Brushwell
+  font-weight: 300
+  font-size: 66.67px
+  margin-bottom: 25px
+
+.testimonials-sub
+  font-family: Nextart
+  font-weight: 300
+  font-size: 37.5px
+  margin-bottom: 175px
+
+.testimonials-feedbacks
+  width: 100%
+  display: flex
+  justify-content: space-between
+  margin-bottom: 45px
+
+.testimonials-comment
+  position: relative
+  text-align: center
+  max-width: 322px
+  padding: 0 30px
+  border: 1px solid black
+  letter-spacing: 1px
+
+.comment-img
+  display: block
+  max-width: 210px
+  position: absolute
+  border-radius: 50%
+  top: -35%
+  left: 60px
+
+.comment-title
+  display: block
+  font-family: RedVelvet
+  font-weight: 400
+  font-size: 18.75px
+  margin-top: 80px
+  margin-bottom: 35px
+
+.comment-text
+  display: block
+  font-weight: 300
+  font-size: 18.75px
+  line-height: 1.5
+  margin-bottom: 35px
+
+// ---------- CONTACT ----------
+.contact
+  background: url(../images/contact-me.jpg) no-repeat
+  background-size: cover
+  background-position: center
+  height: 774px
+  text-align: center
+
+.contact-container
+  max-width: 744px
+  padding-top: 25px
+  display: flex
+  justify-content: space-between
+  margin: auto
+  border-top: 1px solid #000
+
+.contact-sup
+  font-family: Brushwell
+  font-size: 66.67px
+  font-weight: 300
+  padding: 35px 0 30px
+
+.contact-sub
+  font-family: Nextart
+  font-size: 37.5px
+  font-weight: 500
+  margin-bottom: 30px
+
+.contact-form
+  display: flex
+  flex-direction: column
+  max-width: 348px
+  text-align: initial
+
+.contact-form-text
+  padding-top: 10px
+  font-family: RiadPro
+  font-weight: 300
+  font-size: 18.75px
+  line-height: 1.7
+
+.contact-input-title
+  margin-top: 15px
+  margin-bottom: 15px
+  font-family: Luis
+  font-size: 18.75px
+  font-weight: 300
+
+.contact-input
+  max-width: 348px
+  height: 45px
+  background-color: transparent
+  border: 1px solid black
+  font-size: 18px
+  padding-left: 5px
+
+.contact-area
+  resize: none
+  padding-top: 10px
+  height: 150px
+  line-height: 1.3
+
+.contact-img
+  display: block
+  max-width: 100%
+
+// ---------- FOOTER ----------
+.footer
+  background: url(../images/footer.jpg) center no-repeat
+  background-size: cover
+  height: 413px
+  width: 100%
+
+  .header-nav
+    padding-top: 85px
+    margin: 0
+    .nav-icon
+      margin: 0
+
+  .nav-icon
+    color: #949092
+    margin: 50px 30px 50px 0
+    &:last-child
+      margin-right: 0
+    &:hover
+      color: $white
+
+.footer-icons
+  display: flex
+  justify-content: center
+
+.footer-text
+  display: block
+  margin: auto
+  max-width: 450px
+  font-family: Luis
+  font-size: 18.75px
+  color: #ffffffec
+  line-height: 1.5
+  text-align: center
+  margin-bottom: 55px
+
+.copyright
+  display: block
+  font-family: RiadPro
+  font-size: 14.33px
+  text-transform: uppercase
+  color: $white
+  font-weight: 300
+  text-align: center
